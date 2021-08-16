@@ -1,0 +1,13 @@
+#MySQL Database 생성
+mysql -u root –p
+show databases;
+use mysql;
+create user python@localhost identified by 'python';
+grant all on *.* to python@localhost; #python이라는 사용자에게 권한주기
+flush privileges; # 위에명령 실제반영시키기
+exit;
+
+mysql -u python -p
+create database python_db;
+show databases;
+use python_db;
